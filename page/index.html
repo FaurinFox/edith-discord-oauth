@@ -3,25 +3,7 @@
     <head>
         <link rel="stylesheet" href="css/styling.css">
         <title>Discord OAuth</title>
-        <script>
-            function container_styles() {
-                document.getElementById("container").style.display = 'flex';
-                document.getElementById("noscript-container").style.display = 'none';
-            }
-
-            fetch('/cfg/oauth')
-            .then(response => {
-                return response.json();
-            })
-            .then((data) => {
-                document.getElementById("login-btn").href = data.result.oauth.url;
-                container_styles();
-            })
-            .catch((err) => {
-                console.error(`Error fetching data: ${err}`);
-                container_styles();
-            });
-        </script>
+        <script src="js/url_and_noscript.js"></script>
     </head>
     <body>
         <div id="container">
