@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/styling.css">
+        <title>Discord OAuth</title>
+        <script>
+            function container_styles() {
+                document.getElementById("container").style.display = 'flex';
+                document.getElementById("noscript-container").style.display = 'none';
+            }
+
+            fetch('/cfg/oauth')
+            .then(response => {
+                return response.json();
+            })
+            .then((data) => {
+                document.getElementById("login-btn").href = data.result.oauth.url;
+                container_styles();
+            })
+            .catch((err) => {
+                console.error(`Error fetching data: ${err}`);
+                container_styles();
+            });
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <h3>Discord OAuth via NodeJS </h3>
+            <p>Click on the below button to get started!</p>
+            <a href="#" id="login-btn">Login with Discord</a>
+        </div>
+        <noscript>
+            <div id="noscript-container">
+                <h3>JavaScript needs to be enabled</h3>
+                <p>Please enable JavaScript to use this application.</p>
+            </div>
+        </noscript>
+    </body>
+</html>

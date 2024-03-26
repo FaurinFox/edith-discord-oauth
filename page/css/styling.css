@@ -1,0 +1,30 @@
+#container {
+    margin: 300px auto;
+    max-width: 400px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+#noscript-container {
+    margin: 300px auto;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+#login-btn {
+    outline: none;
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background: #6D81CD;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
