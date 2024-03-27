@@ -9,7 +9,7 @@ const app = express();
 app.use(express.static('page'));
 
 app.listen(PORT, () => {
-    Utils.debug(`App listening on port ${PORT}`);
+    Utils.log(`Listening on port ${PORT}`);
 });
 
 app.get('/cfg/oauth', (req, res) => {
