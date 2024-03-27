@@ -6,6 +6,8 @@ import utils from './modules/utils.mjs';
 const PORT = config.port;
 const app = express();
 
+utils.checkConfigPlaceholders();
+
 app.use(express.static('page'));
 
 app.listen(PORT, () => {
