@@ -1,6 +1,6 @@
 {
   "name": "edith-discord-oauth",
-  "version": "0.0.1",
+  "version": "0.8.5",
   "description": "Something that shouldn't need to exist.",
   "type": "module",
   "main": "main.mjs",
