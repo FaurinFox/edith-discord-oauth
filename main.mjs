@@ -1,21 +1,21 @@
 import express from 'express';
 import path from 'path';
-import Config from './config.mjs';
-import Utils from './modules/utils.mjs';
+import config from './config.mjs';
+import utils from './modules/utils.mjs';
 
-const PORT = Config.port;
+const PORT = config.port;
 const app = express();
 
 app.use(express.static('page'));
 
 app.listen(PORT, () => {
-    Utils.log(`Listening on port ${PORT}`);
+    utils.log(`Listening on port ${PORT}`);
 });
 
 app.get('/cfg/oauth', (req, res) => {
-    const data = {result: { oauth: { url: Config.discord.oauth_url}}}
+    const data = {result: { oauth: { url: config.discord.oauth_url}}}
     res.json(data);
-    Utils.debug(`JSON data for oauth provided`);
+    utils.debug(`JSON data for oauth provided`);
 });
 
 app.get('/', (req, res) => {

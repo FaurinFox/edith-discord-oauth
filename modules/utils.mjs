@@ -1,6 +1,6 @@
-import Config from '../config.mjs';
+import config from '../config.mjs';
 
-const configDebug = Config.debug;
+const configDebug = config.debug;
 
 const Utilities = {
     DEBUG: function (logMsg, type) {
