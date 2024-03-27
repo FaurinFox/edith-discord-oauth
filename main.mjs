@@ -15,9 +15,13 @@ app.get('/cfg/oauth', (req, res) => {
     const data = {result: { oauth: { url: Config.discord.oauth_url}}}
     res.json(data);
     console.info(`JSON data for oauth provided`);
-})
+});
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'page', 'index.html'));
-})
+    //res.sendFile(path.join(__dirname, 'page', 'index.html'));
+    res.sendFile(path.resolve('page', 'index.html'));
+});
 
+app.get('/auth/discord', (req, res) => {
+    res.sendFile(path.resolve('page', 'discord-auth.html'));
+});
