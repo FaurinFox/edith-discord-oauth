@@ -1,6 +1,6 @@
 function checkElementById(el) {
     const element = document.getElementById(el);
-    if (element !== null) return true;
+    if (element !== null || element !== undefined) return true;
     else return false;
 }
 
