@@ -29,9 +29,10 @@ fetch('/cfg/result')
         document.getElementById("login-btn").href = data.result.oauth.url;
         container_styles();
     }
-    if (checkElement(1, "#container .container-image"))
+    if (checkElement(1, "#container .container-image")) {
         document.querySelector("#container .container-image").src = data.result.logo.url;
         container_styles();
+    }
 })
 .catch((err) => {
     console.error(`Error fetching data: ${err}`);
