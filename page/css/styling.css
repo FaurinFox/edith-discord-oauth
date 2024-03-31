@@ -1,3 +1,11 @@
+body {
+    background-color: #171717;
+}
+
+h3, p {
+    color: whitesmoke;
+}
+
 #container {
     margin: 300px auto;
     max-width: 400px;
@@ -14,6 +22,10 @@
     flex-direction: column;
     align-items: center;
     font-family: sans-serif;
+}
+
+#container .container-image {
+    padding-bottom: 2.5%;
 }
 
 #login-btn {

@@ -14,10 +14,19 @@ app.listen(PORT, () => {
     utils.log(`Listening on port ${PORT}`);
 });
 
-app.get('/cfg/oauth', (req, res) => {
-    const data = {result: { oauth: { url: config.discord.oauth_url}}}
+app.get('/cfg/result', (req, res) => {
+    const data = {
+        result: {
+            oauth: {
+                url: config.discord.oauth_url
+            },
+            logo: {
+                url: config.page.logo_url
+            }
+        }
+    }
     res.json(data);
-    utils.debug(`JSON data for oauth provided`);
+    utils.debug(`JSON data provided`);
 });
 
 app.get('/', (req, res) => {
