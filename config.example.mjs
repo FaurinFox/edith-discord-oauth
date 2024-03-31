@@ -6,6 +6,10 @@ const Config = {
         client_id: "YOUR_CLIENT_ID",
         client_secret: "YOUR_SECRET_TOKEN",
         oauth_url: "YOUR_OAUTH_URL"
+    },
+    page: {
+        // Full url, or a relative path
+        logo_url: "https://example.com/images/logo.png"
     }
 }
 
